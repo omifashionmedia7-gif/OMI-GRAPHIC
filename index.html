@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omi Graphics Studio</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #020617;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* TOGGLE BUTTON */
+.toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  background: #0ff;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+/* LIGHT MODE */
+.light {
+  background: white;
+  color: black;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px;
+  border-bottom: 1px solid #0ff;
+}
+
+header h1 {
+  color: #0ff;
+}
+
+/* NAV */
+nav {
+  text-align: center;
+}
+
+nav a {
+  margin: 10px;
+  color: #0ff;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* BUTTON */
+.btn {
+  background: #0ff;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  display: inline-block;
+  width: 220px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #0ff;
+  border-radius: 10px;
+}
+
+/* SLIDER */
+.slider {
+  max-width: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  animation: slide 9s infinite;
+}
+
+.slides img {
+  width: 300px;
+}
+
+@keyframes slide {
+  0% {transform: translateX(0);}
+  33% {transform: translateX(-300px);}
+  66% {transform: translateX(-600px);}
+}
+
+/* REVIEW */
+.review {
+  border: 1px solid #0ff;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌙</div>
+
+<header>
+  <h1>Omi Graphics Studio</h1>
+  <p>Creative Designer</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#review">Reviews</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <h2>Design That Makes Your Brand Glow ✨</h2>
+  <a class="btn" href="https://wa.me/8801969242375">Hire Me</a>
+</div>
+
+<div class="section" id="services">
+  <h2>Services</h2>
+  <div class="card">Logo</div>
+  <div class="card">Banner</div>
+  <div class="card">Social Media</div>
+</div>
+
+<!-- SLIDER -->
+<div class="section" id="portfolio">
+  <h2>My Work</h2>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="https://via.placeholder.com/300">
+      <img src="https://via.placeholder.com/300">
+      <img src="https://via.placeholder.com/300">
+    </div>
+  </div>
+
+</div>
+
+<!-- REVIEWS -->
+<div class="section" id="review">
+  <h2>Client Reviews</h2>
+
+  <div class="review">"Amazing design! 🔥"</div>
+  <div class="review">"Very professional work"</div>
+  <div class="review">"Highly recommended!"</div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2>Order Now</h2>
+
+  <form>
+    <input type="text" placeholder="Name"><br>
+    <input type="email" placeholder="Email"><br>
+    <textarea placeholder="Order Details"></textarea><br>
+    <button class="btn">Send</button>
+  </form>
+</div>
+
+<a class="whatsapp" href="https://wa.me/8801969242375">💬</a>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
